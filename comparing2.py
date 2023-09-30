@@ -88,9 +88,9 @@ class meandifference(originalGray):
 obj=originalGray()
 obj.show_original()
 obj.show_grayscale()
-obj1=Filters()
+obj1=Filterss()
 obj1.sharpen_image()
 obj1.blure_image()
-obj2=Channels()
+obj2=Channelss()
 obj2.Show_channels()
 
