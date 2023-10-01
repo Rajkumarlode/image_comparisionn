@@ -31,7 +31,7 @@ class originalGray:             #class for original and respective gray scale im
                     cv2.waitKey(0)
              cv2.destroyAllWindows()
 
-class Filters:
+class Filterss:
        def sharpen_image(self):
               for i in imagepaths:
                 kernel_sharpening = np.array([[-1,-1,-1],[-1,9,-1], [-1,-1,-1]])
@@ -74,8 +74,8 @@ class Filters:
                     ax.set_title('Sharpened Image')
                     plt.show()
        
-class Channels:
-       def Show_channels(self):
+class Channelss:
+       def Show_channelss(self):
               for i in imagepaths:
               # Display RGB Channels of our image
               fig, axs = plt.subplots(1, 3, figsize=(15, 5))
