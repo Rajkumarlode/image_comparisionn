@@ -52,6 +52,28 @@ class Filters:
               ax.axis('off')
               ax.set_title('Blurred Image')
               plt.show()
+       def sharpen2_image(self):
+              for i in imagepaths:
+                    kernel_sharpening = np.array([[0,-1,0],[-1,5,-1], [0,-1,0]])
+                    sharpened = cv2.filter2D(i, -1, kernel_sharpening)
+                    fig, ax = plt.subplots(figsize=(8, 8))
+                    ax.imshow(sharpened)
+                    ax.axis('off')
+                    ax.set_title('Sharpened Image')
+                    plt.show()
+       def sharpenGray(self):
+              for i in imagepaths:
+                    image=cv2.imread(i)
+                    gray= cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+                    for j in gray:
+                        kernel_sharpening = np.array([[0,-1,0],[-1,5,-1], [0,-1,0]])
+                    sharpened = cv2.filter2D(j, -1, kernel_sharpening)
+                    fig, ax = plt.subplots(figsize=(8, 8))
+                    ax.imshow(sharpened)
+                    ax.axis('off')
+                    ax.set_title('Sharpened Image')
+                    plt.show()
+       
 class Channels:
        def Show_channels(self):
               for i in imagepaths:
